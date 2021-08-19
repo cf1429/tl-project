@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: tl-auth
+
+  cloud:
+    nacos:
+      config:
+        namespace: 67b71cbc-1b37-4951-ae10-d4861d8a43a0
+        server-addr: 8.133.170.159:1111
+        username: nacos
+        password: nacos
+        group: DEFAULT_GROUP
+        file-extension: yml
+
+      discovery:
+        namespace: 67b71cbc-1b37-4951-ae10-d4861d8a43a0
+        server-addr: 8.133.170.159:1111
+        username: nacos
+        password: nacos
+
+mybatis-plus:
+  mapper-locations: classpath*:com/cf/**/xml/*Mapper.xml
+  type-aliases-package: com.cf.entity
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+
+
+

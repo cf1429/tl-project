@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: tl-demo
+  cloud:
+    nacos:
+      config:
+        namespace: 67b71cbc-1b37-4951-ae10-d4861d8a43a0
+        server-addr: 8.133.170.159:1111
+        username: nacos
+        password: nacos
+        group: DEFAULT_GROUP
+        file-extension: yml
+      discovery:
+        username: nacos
+        password: nacos
+        namespace: 67b71cbc-1b37-4951-ae10-d4861d8a43a0
+        server-addr: 8.133.170.159:1111

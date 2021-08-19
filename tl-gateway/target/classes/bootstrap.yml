@@ -1,0 +1,50 @@
+
+spring:
+  application:
+    name: tl-gateway
+
+  cloud:
+    nacos:
+      config:
+        namespace: 67b71cbc-1b37-4951-ae10-d4861d8a43a0
+        server-addr: 8.133.170.159:1111
+        username: nacos
+        password: nacos
+        group: DEFAULT_GROUP
+        file-extension: yml
+
+      discovery:
+        username: nacos
+        password: nacos
+        namespace: 67b71cbc-1b37-4951-ae10-d4861d8a43a0
+        server-addr: 8.133.170.159:1111
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#          lower-case-service-id: true
+#
+#      routes:
+#        - id: demo-service
+#          uri: lb://tl-demo
+#          predicates: #断言 配置哪个路径才转发
+#            - Path=/demo/**
+
+
+#  routes: #数组形式
+
+#    - id: order-service  #路由唯一标识
+#      uri: lb://huawei-order-service  #想要转发到的地址,从nacos获取名称转发,lb是负载均衡轮训策略
+#      order: 1 #优先级，数字越小优先级越高
+#      predicates: #断言 配置哪个路径才转发
+#        - Path=/order-server/**
+#      filters: #过滤器，请求在传递过程中通过过滤器修改
+#        - StripPrefix=1  #去掉第一层前缀
+#    - id: video-service
+#      uri: lb://huawei-video-service
+#      order: 1
+#      predicates:
+#        - Path=/video-server/**
+#      filters:
+#        - StripPrefix=1
+
